@@ -1,6 +1,7 @@
 import { sendPriceDropAlert } from "@/lib/email";
 import { scrapeProduct } from "@/lib/firecrawl";
-import { createClient } from "@/utils/supabase/server";
+import { createClient } from "@supabase/supabase-js";
+
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -80,6 +81,7 @@ export async function POST(request) {
             }
           }
         }
+        results.update++;
       } catch (error) {
         console.error(`Failed to update product ID ${product.id}:`, error);
         results.failed++;
