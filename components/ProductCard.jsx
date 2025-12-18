@@ -104,7 +104,7 @@ const ProductCard = ({ product }) => {
             onClick={handleDelete}
             size="sm"
             disabled={deleting}
-            className="text-red-600 hover:text-red-700 gap-1"
+            className="text-green-600 hover:text-green-700 gap-1"
           >
             <Trash2 className="w-4 h-4" />
             Remove
